@@ -1,7 +1,9 @@
 package com.fireblend.datos;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
@@ -57,6 +59,42 @@ public class MainActivity extends AppCompatActivity {
         //Agregarle al intent los valores recuperados
 
         //Llamar a startActivity() con ese intent
+        boolean paso=true;
+        if(nombre.getText().length()<=0){
+            Toast toast =
+            Toast.makeText(MainActivity.this, "Digite un Nombre",
+                    Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.TOP|Gravity.LEFT,0,0);
+            toast.show();
+            paso=false;
+            return;
+        }
+        if(correo.getText().length()<=0){
+            Toast toast =
+                    Toast.makeText(MainActivity.this, "Digite un Correo",
+                            Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.TOP|Gravity.LEFT,0,0);
+            toast.show();
+            paso=false;
+            return;
+        }
+        if(edad.getProgress()<=0){
+            Toast toast =
+                    Toast.makeText(MainActivity.this, "Escoja la edad",
+                            Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.TOP|Gravity.LEFT,0,0);
+            toast.show();
+            paso=false;
+            return;
+        }
+
+        if(paso) {
+            Intent intent = new Intent(MainActivity.this, SegundoActivity.class);
+            intent.putExtra("nombre",nombre.getText().toString());
+            intent.putExtra("edad",edad.getProgress());
+            intent.putExtra("correo",correo.getText().toString());
+            startActivity(intent);
+        }
     }
 
 

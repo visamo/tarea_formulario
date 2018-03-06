@@ -16,7 +16,7 @@ import java.lang.Override;
 public class MainActivity_ViewBinding implements Unbinder {
   private MainActivity target;
 
-  private View view2131165218;
+  private View view2131165219;
 
   @UiThread
   public MainActivity_ViewBinding(MainActivity target) {
@@ -33,7 +33,7 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.edad = Utils.findRequiredViewAsType(source, R.id.edad, "field 'edad'", SeekBar.class);
     target.textoEdad = Utils.findRequiredViewAsType(source, R.id.textoEdad, "field 'textoEdad'", TextView.class);
     view = Utils.findRequiredView(source, R.id.botonMostrar, "method 'mostrar'");
-    view2131165218 = view;
+    view2131165219 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,7 +54,7 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.edad = null;
     target.textoEdad = null;
 
-    view2131165218.setOnClickListener(null);
-    view2131165218 = null;
+    view2131165219.setOnClickListener(null);
+    view2131165219 = null;
   }
 }
