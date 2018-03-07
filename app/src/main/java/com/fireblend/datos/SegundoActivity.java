@@ -19,7 +19,8 @@ public class SegundoActivity extends AppCompatActivity {
     TextView correo;
     @BindView(R.id.edad)
     TextView edad;
-
+    @BindView(R.id.pronombre)
+    TextView pronombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class SegundoActivity extends AppCompatActivity {
         correo.setText(intent.getStringExtra("correo"));
         Integer intEdad=intent.getIntExtra("edad",0);
         edad.setText(Integer.toString(intEdad));
+        pronombre.setText(intent.getStringExtra("pronombre"));
     }
 
     @OnClick(R.id.botonAtras)
