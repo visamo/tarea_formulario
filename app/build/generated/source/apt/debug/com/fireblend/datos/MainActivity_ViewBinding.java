@@ -5,6 +5,7 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import butterknife.Unbinder;
@@ -32,6 +33,8 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.correo = Utils.findRequiredViewAsType(source, R.id.correo, "field 'correo'", EditText.class);
     target.edad = Utils.findRequiredViewAsType(source, R.id.edad, "field 'edad'", SeekBar.class);
     target.textoEdad = Utils.findRequiredViewAsType(source, R.id.textoEdad, "field 'textoEdad'", TextView.class);
+    target.radioButtonEl = Utils.findRequiredViewAsType(source, R.id.rbEl, "field 'radioButtonEl'", RadioButton.class);
+    target.radioButtonElla = Utils.findRequiredViewAsType(source, R.id.rbElla, "field 'radioButtonElla'", RadioButton.class);
     view = Utils.findRequiredView(source, R.id.botonMostrar, "method 'mostrar'");
     view2131165219 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
@@ -53,6 +56,8 @@ public class MainActivity_ViewBinding implements Unbinder {
     target.correo = null;
     target.edad = null;
     target.textoEdad = null;
+    target.radioButtonEl = null;
+    target.radioButtonElla = null;
 
     view2131165219.setOnClickListener(null);
     view2131165219 = null;
